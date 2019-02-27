@@ -74,7 +74,7 @@ RUN apt-get -qq -y install curl bzip2 \
     && conda install -y python=3 \
     && conda update conda \
     && conda create -n jupyterlab python=3 -y \
-    && conda install -c condaforge jupyterlab -n jupyterlab \
+    && conda install -c conda-forge jupyterlab -n jupyterlab \
     && source activate jupyterlab \
     && pip --no-cache-dir install \ 
         Pillow \
@@ -83,8 +83,8 @@ RUN apt-get -qq -y install curl bzip2 \
         numpy \
         pandas \
         scipy \
-	seaborn \
         sklearn \
+	seaborn \
 	sympy \
 	cython \
 	statsmodels \
@@ -99,7 +99,7 @@ RUN apt-get -qq -y install curl bzip2 \
 	beautifulsoup4 \
 	protobuf \
 	xlrd \
-        https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.5.0-cp36-cp36m-linux_x86_64.whl \
+        tensorflow-gpu \
 	torch \
 	torchvision \
 	keras \
