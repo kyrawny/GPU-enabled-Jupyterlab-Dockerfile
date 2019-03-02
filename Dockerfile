@@ -6,7 +6,7 @@
 # https://github.com/conda/conda-docker/blob/master/miniconda3/debian/Dockerfile
 
 FROM ubuntu:16.04
-MAINTAINER Eddy Kim <eddykim87@gmail.com>
+MAINTAINER Kyra Wang <cyrus.wang.nian.yu@gmail.com>
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 ENV CUDA_VERSION=9.0.176 \
     CUDA_PKG_VERSION="9-0=9.0.176-1" \
@@ -40,6 +40,7 @@ RUN NVIDIA_GPGKEY_SUM=d1be581509378368edeec8c1eb2958702feedf3bc3d17011adbf24efac
 	emacs \
 	git \
 	inkscape \
+	imagemagick \
 	jed \
 	libsm6 \
 	libxext-dev \
@@ -84,6 +85,7 @@ RUN apt-get -qq -y install curl bzip2 \
         pandas \
         scipy \
         sklearn \
+	scikit-image \
 	seaborn \
 	sympy \
 	cython \
