@@ -86,6 +86,7 @@ RUN apt-get -qq -y install curl bzip2 \
         scipy \
         sklearn \
 	scikit-image \
+	scikit-multilearn \
 	seaborn \
 	sympy \
 	cython \
@@ -105,6 +106,8 @@ RUN apt-get -qq -y install curl bzip2 \
 	torch \
 	torchvision \
 	keras \
+	skorch \
+	fastai \
     && apt-get -qq -y remove curl bzip2 \
     && apt-get -qq -y autoremove \
     && apt-get autoclean \
